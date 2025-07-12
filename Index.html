@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Golden by HUNTR/X (lyrics)</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Quicksand&display=swap" rel="stylesheet">
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: 'Quicksand', sans-serif;
+      background: url('background.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    body {
+      overflow-y: auto;
+    }
+
+    .overlay {
+      background: rgba(0, 0, 0, 0.6);
+      backdrop-filter: blur(8px);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 4vh 5vw;
+      box-sizing: border-box;
+      width: 100%;
+    }
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5rem;
+      text-align: center;
+      margin-bottom: 2rem;
+      color: #ffeedd;
+    }
+
+    .main-section {
+      display: flex;
+      gap: 2rem;
+      width: 100%;
+      max-width: 1200px;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      box-sizing: border-box;
+    }
+
+    .spinning-disk {
+      width: 450px;
+      height: 450px;
+      border-radius: 50%;
+      border: 5px solid rgba(255, 255, 255, 0.3);
+      background: url('background.jpg') no-repeat center center;
+      background-size: cover;
+      flex-shrink: 0;
+    }
+
+    .rotate {
+      animation: spin 15s linear infinite;
+    }
+
+    @keyframes spin {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+
+    .lyrics-box {
+      flex: 1;
+      min-width: 280px;
+      max-width: 600px;
+      height: 40vh;
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      border-radius: 15px;
+      padding: 20px;
+      overflow-y: auto;
+    }
+
+    .lyrics {
+      font-size: 1.1rem;
+      line-height: 1.7;
+      white-space: pre-line;
+      text-align: justify;
+    }
+
+    .controls {
+      margin-top: 2rem;
+      width: 100%;
+      max-width: 800px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    button {
+      background: rgba(255, 255, 255, 0.2);
+      border: 1px solid #fff;
+      padding: 10px 20px;
+      border-radius: 30px;
+      color: white;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    button:hover {
+      background: rgba(255, 255, 255, 0.4);
+      color: black;
+    }
+
+    .progress-container {
+      width: 100%;
+    }
+
+    input[type="range"] {
+      -webkit-appearance: none;
+      width: 100%;
+      height: 10px;
+      background: linear-gradient(to right, #f3c593, #e39f6c);
+      border-radius: 10px;
+      outline: none;
+      touch-action: pan-y;
+    }
+
+    input[type="range"]::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      height: 18px;
+      width: 18px;
+      border-radius: 50%;
+      background: white;
+      cursor: pointer;
+      box-shadow: 0 0 4px rgba(0, 0, 0, 0.6);
+    }
+
+    .lyrics-box::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    .lyrics-box::-webkit-scrollbar-thumb {
+      background-color: rgba(255,255,255,0.3);
+      border-radius: 5px;
+    }
+
+    @media (max-width: 768px) {
+      .main-section {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .spinning-disk {
+        width: 90vw;
+        height: 90vw;
+        max-width: 450px;
+        max-height: 450px;
+      }
+
+      .lyrics-box {
+        width: 90vw;
+        max-width: 600px;
+        margin: 20px auto 0 auto;
+        display: block;
+        max-height: 300px;
+      }
+
+      h1 {
+        font-size: 2rem;
+      }
+
+      .lyrics {
+        font-size: 1rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      button {
+        font-size: 0.9rem;
+        padding: 8px 15px;
+      }
+
+      .lyrics-box {
+        padding: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="overlay">
+    <h1>Golden by HUNTR/X (lyrics)</h1>
+
+    <div class="main-section">
+      <div class="spinning-disk" id="disk"></div>
+
+      <div class="lyrics-box">
+        <div class="lyrics">
+[Verse 1: Rumi, Zoey, Mira & All]  
+I was a ghost, I was alone (Hah)  
+어두워진 (Hah), 앞길속에 (Hah)  
+Given the throne, I didn't know how to believe (Hah)  
+I was the queen that I'm meant to be (Ah)  
+I lived two lives, tried to play both sides  
+But I couldn't find my own place (Oh, oh)  
+Called a problem child 'cause I got too wild  
+But now that's how I'm getting paid, 끝없이 on stage  
+
+[Pre-Chorus: Rumi & All]  
+I'm done hidin', now I'm shinin' like I'm born to be  
+We dreamin' hard, we came so far, now I believe  
+
+[Chorus: Rumi & All]  
+We're goin' up, up, up, it's our moment  
+You know together we're glowin'  
+Gonna be, gonna be golden  
+Oh, up, up, up with our voices  
+영원히 깨질 수 없는  
+Gonna be, gonna be golden  
+
+[Post-Chorus: All]  
+Oh, I'm done hidin' now I'm shinin' like I'm born to be  
+Oh, our time, no fears, no lies  
+That's who we're born to be  
+
+[Verse 2: Rumi]  
+Waited so long to break these walls down  
+To wake up and feel like me  
+Put these patterns all in the past now  
+And finally live like the girl they all see  
+
+[Pre-Chorus: Rumi]  
+No more hiding, I'll be shining like I'm born to be  
+'Cause we are hunters, voices strong, and I know I believe  
+
+[Chorus: Rumi & All]  
+We're goin' up, up, up, it's our moment  
+You know together we're glowing  
+Gonna be, gonna be golden  
+Oh, up, up, up, with our voices  
+영원히 깨질 수 없는  
+Gonna be, gonna be golden  
+
+[Post-Chorus: All]  
+Oh, I'm done hidin', now I'm shining like I'm born to be  
+Oh, our time, no fears, no lies  
+That's who we're born to be  
+
+[Outro: Rumi & All]  
+You know we're gonna be, gonna be golden (Oh)  
+We're gonna be, gonna be (Oh)  
+Born to be, born to be glowin' (Oh)  
+밝게 빛나는 우리  
+You know that it's our time, no fears, no lies (Oh, oh)  
+That's who we're born to be  
+        </div>
+      </div>
+    </div>
+
+    <div class="controls">
+      <div class="buttons">
+        <button onclick="playMusic()">▶ Play</button>
+        <button onclick="pauseMusic()">⏸ Pause</button>
+        <button onclick="resetMusic()">⟲ Reset</button>
+      </div>
+      <div class="progress-container">
+        <input type="range" id="progress" value="0" min="0" max="100">
+      </div>
+    </div>
+  </div>
+
+  <audio id="bgMusic" src="music.mp3"></audio>
+
+  <script>
+    const music = document.getElementById('bgMusic');
+    const progress = document.getElementById('progress');
+    const disk = document.getElementById('disk');
+
+    function playMusic() {
+      music.play();
+    }
+
+    function pauseMusic() {
+      music.pause();
+    }
+
+    function resetMusic() {
+      music.pause();
+      music.currentTime = 0;
+      progress.value = 0;
+      disk.classList.remove('rotate');
+    }
+
+    music.addEventListener('play', () => {
+      disk.classList.add('rotate');
+    });
+
+    music.addEventListener('pause', () => {
+      disk.classList.remove('rotate');
+    });
+
+    music.addEventListener('timeupdate', () => {
+      const percent = (music.currentTime / music.duration) * 100;
+      progress.value = percent || 0;
+    });
+
+    progress.addEventListener('input', () => {
+      const seekTime = (progress.value / 100) * music.duration;
+      music.currentTime = seekTime;
+    });
+  </script>
+
+</body>
+</html>
